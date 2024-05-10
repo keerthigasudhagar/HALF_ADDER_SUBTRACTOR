@@ -68,17 +68,40 @@ not(abar,a);
 xor(D,a,b);
 and(Bo,abar,b);
 endmodule
-
-
+**half adder:**
+```
+module halfadd_top(a,b,sum,carry);
+input a,b;
+output sum,carry; 
+assign sum = a^b;
+assign carry = a & b;
+endmodule
+```
+**half subtractor:**
+```
+module halfsub_top(a,b,D,Bo);
+input a,b;
+output D,Bo; // Outputs sum and carry for half adder:Outputs difference D,Borrow Bo for half subtractor
+assign D = a ^ b;
+assign Bo = ~a & b;
+endmodule
+```
 Developed by:Keerthika.S
 RegisterNumber:212223040093
 
 **RTL Schematic**
-![Screenshot 2024-03-19 080053](https://github.com/keerthigasudhagar/HALF_ADDER_SUBTRACTOR/assets/163229129/4d91492e-cb35-47dd-a709-0c3aa7eb30d1)
+
+![328083651-5dd64107-3327-4f79-98c8-a833f72357ee](https://github.com/keerthigasudhagar/HALF_ADDER_SUBTRACTOR/assets/163229129/19b6f00e-5ae8-4f1c-85fd-7cfaad8d36c0)
+
+**Half subtractor:**
+![328083726-dbe8bd24-1d92-48b4-8368-0b6248b486eb](https://github.com/keerthigasudhagar/HALF_ADDER_SUBTRACTOR/assets/163229129/4f5cbf91-b12e-4db9-afbc-3368d780c597)
 
 **Output/TIMING Waveform**
-![Screenshot 2024-03-19 075841](https://github.com/keerthigasudhagar/HALF_ADDER_SUBTRACTOR/assets/163229129/1c059dcd-89ba-4c60-ac72-b0794c05f003)
+![328083861-33eb029e-8b15-4dcb-8b50-7829899ecea4](https://github.com/keerthigasudhagar/HALF_ADDER_SUBTRACTOR/assets/163229129/4de73885-6a19-4efd-ada6-b789059083f8)
+
+**Half subtractor:**
+![328083905-188ae379-582d-4e82-859a-1a36e71c1c22](https://github.com/keerthigasudhagar/HALF_ADDER_SUBTRACTOR/assets/163229129/a0b91859-a899-480c-844c-3b401327936d)
 
 **Result:**
-Thus Implementation-of-Half-Adder-and-Half Subtractor-circuit is running successfully
+ Thus the program was successfully verified.
 
